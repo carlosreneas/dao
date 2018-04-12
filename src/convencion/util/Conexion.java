@@ -22,6 +22,9 @@ public class Conexion {
 				| ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
  
@@ -45,7 +48,7 @@ public class Conexion {
         ResultSet res = statement.executeQuery(query);
         return res;
     }
-	
+		
 	public int insert(String insertQuery) throws SQLException {
         statement = db.con.createStatement();
         int result = statement.executeUpdate(insertQuery);
